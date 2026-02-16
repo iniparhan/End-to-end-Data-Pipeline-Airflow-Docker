@@ -1,0 +1,20 @@
+{
+    "kind": "youtube#playlistItemListResponse",
+    "etag": "sMzSOOBE9UnQvuYjD2GfXPwl3D0",
+    "nextPageToken": "EAAaHlBUOkNBRWlFRGN4UXpFNFFqTkZRVE0zUVRFNE4wRQ",
+    "items": [
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "56YCmNtN0MUsAV54BvyGzwwxtsU",
+            "id": "VVVYNk9RM0RrY3NiWU5FNkg4dVFRdVZBLmdhcjRVM24tSUxZ",
+            "contentDetails": {
+                "videoId": "gar4U3n-ILY",
+                "videoPublishedAt": "2026-02-09T17:00:00Z"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 943,
+        "resultsPerPage": 1
+    }
+}

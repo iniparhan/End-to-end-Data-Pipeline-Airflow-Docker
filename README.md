@@ -23,4 +23,9 @@ venv\Scripts\Activate.ps1
 ### Close VM
 ```bash
 deactivate
+<<<<<<< HEAD
 ```
+=======
+```
+
+>>>>>>> 14e8e7717d8cfbe0e0c254c4cfac661c690390a3
