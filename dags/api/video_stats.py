@@ -13,7 +13,7 @@ from airflow.models import Variable
 
 
 API_KEY = Variable.get('API_KEY') 
-CHANNEL_NAME = Variable.get('MrBeast')
+CHANNEL_NAME = Variable.get('CHANNEL_HANDLE')
 
 max_result = 50
 
