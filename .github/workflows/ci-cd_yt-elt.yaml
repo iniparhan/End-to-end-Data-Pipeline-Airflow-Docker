@@ -82,20 +82,6 @@ jobs:
         - name: Set up Docker Compose
           if: steps.changed-files-tests.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
           run: docker compose up -d
-        - name: Wait for Airflow scheduler
-          run: |
-            echo "Waiting for scheduler to become healthy..."
-            for i in {1..60}; do
-              STATUS=$(docker inspect --format='{{.State.Health.Status}}' airflow-scheduler 2>/dev/null || echo "starting")
-              if [ "$STATUS" = "healthy" ]; then
-                echo "Scheduler is healthy"
-                exit 0
-              fi
-              sleep 5
-            done
-            echo "Scheduler did not become healthy in time"
-            docker logs airflow-scheduler
-            exit 1
         - name: Run Unit and Integration Tests
           if: steps.changed-files-tests.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
           run: docker exec -t airflow-worker sh -c "pytest tests/ -v"
